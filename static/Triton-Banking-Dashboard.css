@@ -1,0 +1,191 @@
+
+/* General Reset */
+* {
+    margin: 0; /*Removes default margin*/
+    padding: 0; /*Removes default padding*/
+    box-sizing: border-box; /*padding and border does not affect element width/height*/
+    font-family: Arial, sans-serif; /*Defines font family*/
+}
+
+html, body {
+    height: 100%; /*Ensures that the background covers the entire page height*/
+    width: 100%; /*Ensures that the background covers the entire page width*/
+}
+
+/* Background Image Fix */
+body {
+    background: url("/static/DashboardOceanBackground.jpg") no-repeat center center fixed; /*URL for background image, centered, fixed and only one copy shown*/
+    background-size: cover; /*Ensures the background image adapts to the window size*/
+}
+
+/* Container for the image and text */
+.content {
+    position: absolute; /*Covers the entirety of the container (separate from normal flow)*/
+    top: 0%; /*Positions content at the top of the page*/
+    left: 0; /*Aligns it to the left*/
+    display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
+    align-items: center; /*Aligns elements vertically*/
+    z-index: 2; /* Image and text appear above the video */
+}
+
+/* Overlay Image */
+.overlay-image {
+    width: 125px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Text Container */
+.text-container {
+    margin-left: 0px; /* Space between the image and the text */
+    display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
+    flex-direction: column; /*Arranges text in a column*/
+    justify-content: center; /*Centers text vertically*/
+    width: 500px; /*Controls container width*/
+    height: 125px; /*Controls container height*/
+    background-color: rgba(255, 255, 255, 0.8); /*Creates color (RGB) with opacity option (0.8)*/
+    padding: 20px; /*Adds padding inside text box*/
+}
+
+/* Title */
+.title {
+    font-family: 'Arial', sans-serif; /*Defines font family*/
+    font-size: 2rem; /* Adjust the font size */
+    margin-bottom: 10px; /* Space between the title and slogan */
+    color: grey; /*Sets text colour*/
+}
+
+/* Slogan */
+.slogan {
+    font-family: 'Arial', sans-serif; /*Defines font family*/
+    font-size: 1.3rem; /* Adjust the font size */
+    color: blue; /* Change color of the text */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    top: 25%; /*Positions content at the top of the page*/
+    left: 20%; /*Aligns it to the left*/
+    position: absolute; /*Covers the entirety of the container (separate from normal flow)*/
+    width: 60%; /*Controls container width*/
+    margin: 20px auto; /*Adds spacing in between fields*/
+    padding: 20px; /*Adds padding inside text box*/
+    border-radius: 10px; /*Allows the container to have rounded edges*/
+    z-index: 3; /* Ensures it appears above the video */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a white background to the whole container */
+}
+
+/* Account Summary */
+.account-summary {
+    background: rgb(84, 162, 252); /*Sets background style of element*/
+    padding: 20px; /*Adds padding inside text box*/
+    border-radius: 10px; /*Allows the container to have rounded edges*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Ensures there is a shadow within a container*/
+    text-align: center; /*used to align text specifically*/
+    z-index: 2; /* Ensures it appears above the video */
+}
+
+.balance {
+    font-size: 2rem; /* Adjust the font size */
+    color: rgb(32, 102, 32); /* Change color of the text */
+}
+
+/* Dashboard Layout: Transactions and Credit Card side by side */
+.dashboard-row {
+    display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
+    justify-content: space-between; /* Ensures spacing between sections */
+    gap: 20px; /* Adds spacing between sections */
+    margin-top: 20px; /*Sets space from the top*/
+    text-align: center; /*used to align text specifically*/
+    z-index: 2; /* Ensures it appears above the video */
+}
+
+/* Transactions Section */
+.dashboard-sections {
+    flex: 1; /* Takes up available space */
+    background: linear-gradient(135deg, #0066ff, #52c2e4); /*Sets background style properties as gradient*/
+    padding: 20px; /*Adds padding inside text box*/
+    border-radius: 10px; /*Allows the container to have rounded edges*/
+    justify-content: space-between; /* Ensures spacing between sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Ensures there is a shadow within a container*/
+    transition: transform 0.3s ease-in-out; /*allows property values to change smoothly*/
+    text-align: center; /*used to align text specifically*/
+    z-index: 2; /* Ensures it appears above the video */
+}
+
+.transactions-list {
+    list-style-type: none; /* Specifies the type of list used. (Unordered, Ordered) */
+    padding: 0; /*Used to create space around an element's content*/
+    margin: 0; /*Used to create space around elements, outside of any defined borders*/
+}
+
+.transactions-list li {
+    font-size: 0.9rem; /* Adjust the font size */
+    padding: 1px 0; /*Used to create space around an element's content*/
+}
+
+.dashboard-sections:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Credit Card Section */
+.credit-card {
+    flex: 0.5; /* Smaller width than transactions */
+    max-width: 450px; /* Defines max-width of container */
+    height: 200px; /*Controls container height*/
+    background: linear-gradient(135deg, #0066ff, #52c2e4); /*Sets background style properties as gradient*/
+    color: white; /*Sets text colour*/
+    border-radius: 15px; /*Allows the container to have rounded edges*/
+    padding: 20px; /*Adds padding inside text box*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Ensures there is a shadow within a container*/
+    display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
+    flex-direction: column; /* sets how flex items are placed in the flex container*/
+    justify-content: space-between; /* Ensures spacing between sections */
+    transition: transform 0.3s ease-in-out; /*allows property values to change smoothly*/
+    text-align: center; /*used to align text specifically*/
+    z-index: 2; /* Ensures it appears above the video */
+}
+
+.credit-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.card-number {
+    font-size: 1.4rem; /* Adjust the font size */
+    letter-spacing: 2px; /*Sets the horizontal spacing behavior between text characters*/
+    margin-bottom: 10px; /*sets the margin area on the bottom of an element*/
+}
+
+.cardholder {
+    font-size: 1rem; /* Adjust the font size */
+    text-transform: uppercase; /*Controls capitalization of text*/
+    font-weight: bold; /*controls thickness of the text*/
+}
+
+.expiry-date {
+    font-size: 0.9rem; /* Adjust the font size */
+}
+
+/* Log-Out Button Styling (Inside the dashboard container) */
+.logout-button {
+    width: 100%; /* Make the button span the full width of the container */
+    background-color: #ff5f5f; /* Red background */
+    color: white; /* White text */
+    font-size: 1rem; /* Font size */
+    padding: 10px 20px; /*Adds space inside button using padding*/
+    border: none; /*Defines a border*/
+    border-radius: 5px; /*Allows the container to have rounded edges*/
+    cursor: pointer; /*specifies the mouse cursor to be displayed when pointing over an element*/
+    z-index: 2; /* Ensure it is above other elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Ensures there is a shadow within a container*/
+    margin-top: 20px; /* Add some space from the other elements */
+}
+
+/* Log-Out Button Hover Effect */
+.logout-button:hover { /*Allows the style of the button to be changed when the mouse is over it*/
+    background-color: #ff3333; /* Darker red on hover */
+}
+
+/* Log-Out Button Active Effect */
+.logout-button:active { /*Allows the style of the button to be changed when it is clicked*/
+    background-color: #cc2929; /* Even darker red when clicked */
+}
