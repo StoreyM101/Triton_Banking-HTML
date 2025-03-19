@@ -107,9 +107,18 @@ body {
     border-radius: 10px; /*Allows the container to have rounded edges*/
     justify-content: space-between; /* Ensures spacing between sections */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Ensures there is a shadow within a container*/
-    transition: transform 0.3s ease-in-out; /*allows property values to change smoothly*/
     text-align: center; /*used to align text specifically*/
     z-index: 2; /* Ensures it appears above the video */
+}
+
+/* Add spacing below all container titles */
+.account-summary h2,
+.dashboard-sections h2 {
+    text-decoration: underline; /* Adds underline */
+    text-underline-offset: 5px; /* Adjusts distance between text and underline */
+    text-decoration-thickness: 2px; /* Makes underline slightly thicker */
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    text-align: center;
 }
 
 .transactions-list {
@@ -123,30 +132,21 @@ body {
     padding: 1px 0; /*Used to create space around an element's content*/
 }
 
-.dashboard-sections:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
 /* Credit Card Section */
 .credit-card {
-    flex: 0.5; /* Smaller width than transactions */
+    flex: 0.6; /* Smaller width than transactions */
     max-width: 450px; /* Defines max-width of container */
-    height: 200px; /*Controls container height*/
+    height: 208px; /*Controls container height*/
     background: linear-gradient(135deg, #0066ff, #52c2e4); /*Sets background style properties as gradient*/
-    color: white; /*Sets text colour*/
+    color: rgb(0, 0, 0); /*Sets text colour*/
     border-radius: 15px; /*Allows the container to have rounded edges*/
     padding: 20px; /*Adds padding inside text box*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*Ensures there is a shadow within a container*/
     display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
     flex-direction: column; /* sets how flex items are placed in the flex container*/
     justify-content: space-between; /* Ensures spacing between sections */
-    transition: transform 0.3s ease-in-out; /*allows property values to change smoothly*/
     text-align: center; /*used to align text specifically*/
     z-index: 2; /* Ensures it appears above the video */
-}
-
-.credit-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .card-number {
@@ -157,12 +157,12 @@ body {
 
 .cardholder {
     font-size: 1rem; /* Adjust the font size */
+    font-weight: bold;
     text-transform: uppercase; /*Controls capitalization of text*/
-    font-weight: bold; /*controls thickness of the text*/
 }
 
 .expiry-date {
-    font-size: 0.9rem; /* Adjust the font size */
+    font-size: 1rem; /* Adjust the font size */
 }
 
 /* Log-Out Button Styling (Inside the dashboard container) */
