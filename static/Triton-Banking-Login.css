@@ -103,7 +103,7 @@ body {
 }
 
 /* Input Styles */
-input[type="text"], input[type="password"] { /**/
+input[type="text"], input[type="password"] { /*defines two different input entry fields*/
     width: 100%; /*Ensures the width of the entry fields*/
     padding: 12px 20px; /*Adds space inside input using padding*/
     margin: 8px 0; /*Adds spacing in between fields*/
