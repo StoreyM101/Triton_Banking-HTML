@@ -1,35 +1,35 @@
 <!DOCTYPE html> <!--Document Type Decleration for HTML-->
-<html lang="en"> <!--Specifies the English Language and Start of HTML code-->
+<html lang="en"> <!--Specifies the English Language-->
 
-<head> <!--Head of the HTML, defines several attributes and metadata-->
-    <title>Triton Banking</title> <!--Title of the HTML (appears in address bar)-->
+<head> <!--Head of the HTML-->
+    <title>Triton Banking</title> <!--Title of the HTML-->
     <meta charset="UTF-8"> <!--Specifies UTF-8 Character Encoding Standard-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Refers to the size of the visible area on the screen-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='Triton-Banking-Login.css') }}"> <!--This line specifies the relationship between this HTML code and a linked document. In this case CSS style sheet via static link-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Size of the visible area on the screen-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Triton-Banking-Login.css') }}"> <!--Specifies the CSS style sheet via static link-->
 </head> <!--End of HTML Head-->
 
 <body> <!--Start of HTML Body-->
 
-    <div class="content"> <!--Defines a division/class in the HTML document known as "content" (top-left of webpage)-->
-        <img src="{{ url_for('static', filename='Triton.jpg') }}" alt="Overlay Image" class="overlay-image"> <!--Defines an image inside the HTML as an overlay image appearing over the video background as a static link-->
-        <div class="text-container"> <!--A nested class inside another class known as "text-container" within HTML-->
-            <h1 class="title">Triton Banking</h1> <!--Specifies a header displayed on the webpage-->
-            <p class="slogan">Ride the Waves of Wealth with Triton Banking</p> <!--Defines a paragraph representing a slogan-->
-        </div> <!--End of nested "text-container" division/class in HTML-->
-    </div> <!--End of division/class "content" in HTML-->
+    <div class="content"> <!--"content" class (top-left of webpage)-->
+        <img src="{{ url_for('static', filename='Triton.jpg') }}" alt="Triton-Image" class="overlay-image"> <!--Defines an image to overlay over background-->
+        <div class="text-container"> <!--"text-container" nested class-->
+            <h1 class="title">Triton Banking</h1> <!--Header Definition-->
+            <p class="slogan">Ride the Waves of Wealth with Triton Banking</p> <!--Paragraph definition for text-->
+        </div> <!--End of nested "text-container" class-->
+    </div> <!--End of "content" class-->
 
-    <div class="login-form"> <!--Defines a division/class in the HTML document known as "login-form" (center of webpage)-->
-        <h2>Login</h2> <!--Specifies a header displayed on the webpage-->
-        <form action="{{ url_for('login') }}" method="POST"> <!--HTML form that allows user input which is passed onto a server for processing using HTTP POST request-->
-            <div class="user-container"> <!--A nested class inside another class known as "user-container" within HTML-->
-                <label for="uname"><b>Username</b></label> <!--Defines a label within HTML displayed as "Username"-->
-                <input type="text" placeholder="Enter Username" name="uname" required> <!--Defines an entry field which asks the user to enter their username-->
-                <label for="psw"><b>Password</b></label> <!--Defines a label within HTML displayed as "Password"-->
-                <input type="password" placeholder="Enter Password" name="psw" required> <!--Defines an entry field which asks the user to enter their password-->
-                <button type="submit">Login</button> <!--Defines a button for the user to press. Leads to success.html-->
-            </div> <!--End of nested "user-container" division/class in HTML-->
-        </form> <!--End of form in HTML-->
-    </div> <!--End of division/class "user-container" in HTML-->
+    <div class="login-form"> <!--"login-form" class (center of webpage)-->
+        <h2>Login</h2> <!--Header Definition-->
+        <form action="{{ url_for('login') }}" method="POST"> <!--HTML form allowing for user input (passed onto server for processing using HTTP POST request)-->
+            <div class="user-container"> <!--"user-container" nested class-->
+                <label for="uname"><b>Username</b></label> <!--Label Definition "uname"-->
+                <input type="text" placeholder="Enter Username" name="uname" required> <!--Text entry field for user input-->
+                <label for="psw"><b>Password</b></label> <!--Label Definition "psw"-->
+                <input type="password" placeholder="Enter Password" name="psw" required> <!--Text entry field for user input-->
+                <button type="submit">Login</button> <!--Button to submit user input.-->
+            </div> <!--End of nested "user-container" classL-->
+        </form> <!--End of form-->
+    </div> <!--End of "user-container" class-->
 
 </body> <!--End of HTML Body-->
 
