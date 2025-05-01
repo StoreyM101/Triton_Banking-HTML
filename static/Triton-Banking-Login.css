@@ -1,0 +1,135 @@
+/* Reset styles */
+* {
+    margin: 0; /*Removes default margin*/
+    padding: 0; /*Removes default padding*/
+    box-sizing: border-box; /*padding and border does not affect element width/height*/
+    font-family: Arial, sans-serif; /*Defines font family*/
+}
+
+html, body {
+    height: 100%; /*Ensures that the background covers the entire page height*/
+    width: 100%; /*Ensures that the background covers the entire page width*/
+}
+
+/* Background Image Fix */
+body {
+    background: url("/static/LoginCityBackground.jpg") no-repeat center center fixed; /*URL for background image, centered, fixed and only one copy shown*/
+    background-size: cover; /*Ensures the background image adapts to the window size*/
+}
+
+/* Container for the image and text */
+.content {
+    position: absolute; /*Covers the entirety of the container (separate from normal flow)*/
+    top: 0; /*Positions content at the top of the page*/
+    left: 0; /*Aligns it to the left*/
+    display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
+    align-items: center; /*Aligns elements vertically*/
+    z-index: 2; /* Image and text appear above the video */
+}
+
+/* Overlay Image */
+.overlay-image {
+    width: 125px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Text Container */
+.text-container {
+    margin-left: 0px; /* Space between the image and the text */
+    display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
+    flex-direction: column; /*Arranges text in a column*/
+    justify-content: center; /*Centers text vertically*/
+    width: 500px; /*Controls container width*/
+    height: 125px; /*Controls container height*/
+    background-color: rgba(255, 255, 255, 0.8); /*Creates color (RGB) with opacity option (0.8)*/
+    padding: 20px; /*Adds padding inside text box*/
+}
+
+/* Title */
+.title {
+    font-family: 'Arial', sans-serif; /*Defines font family*/
+    font-size: 2rem; /* Adjust the font size */
+    margin-bottom: 10px; /* Space between the title and slogan */
+    color: grey; /*Sets text colour*/
+}
+
+/* Slogan */
+.slogan {
+    font-family: 'Arial', sans-serif; /*Defines font family*/
+    font-size: 1.3rem; /*Adjust the font size*/
+    color: blue; /*Sets text colour*/
+}
+
+/* Login Form */
+.login-form {
+    position: absolute; /*Covers the entirety of the container (separate from normal flow)*/
+    top: 50%; /*Positions content at the top of the page*/
+    left: 50%; /*Aligns it to the left*/
+    transform: translate(-50%, -50%); /*allows for more in-depth element properties*/
+    width: 350px; /*Controls container width*/
+    background: linear-gradient(135deg, #0066ff, #52c2e4); /*Sets background style properties as gradient*/
+    padding: 20px; /*Adds padding inside text box*/
+    border-radius: 10px; /*Allows the container to have rounded edges*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Ensures there is a shadow within a container*/
+    text-align: center; /*used to align text specifically*/
+    z-index: 3; /* Image and text appear above the video */
+}
+
+/* Login Title */
+.login-form h2 {
+    font-family:'Ariel', sans-serif; /*Defines font family*/
+    font-size: 24px; /*Adjust the font size*/
+    color: rgb(0, 0, 0); /*Sets colour of text*/
+    margin-bottom: 20px; /*sets the margin area on the bottom of an element*/
+}
+
+/* Input Fields */
+.user-container {
+    display: flex; /*specifies display behavior, makes elements responsive by adjusting their sizing*/
+    flex-direction: column; /* sets how flex items are placed in the flex container*/
+    margin-bottom: 15px; /*sets the margin area on the bottom of an element*/
+    display: block; /*specifies display behavior, makes elements within a block*/
+    text-align: left; /*used to align text specifically*/
+}
+
+/* Input Labels */
+.user-container label {
+    font-family: 'Ariel', sans-serif; /*Defines font family*/
+    font-size: 14px; /*Adjust the font size*/
+    margin-bottom: 5px; /*sets the margin area on the bottom of an element*/
+    color: #000000; /*Sets colour of text*/
+    display: block; /*specifies display behavior, makes elements within a block*/
+    text-align: left; /*used to align text specifically*/
+}
+
+/* Input Styles */
+input[type="text"], input[type="password"] { /*defines two different input entry fields*/
+    width: 100%; /*Ensures the width of the entry fields*/
+    padding: 12px 20px; /*Adds space inside input using padding*/
+    margin: 8px 0; /*Adds spacing in between fields*/
+    display: inline-block; /*specifies display behavior, keeping inputs inline*/
+    text-align: left; /*used to align text specifically*/
+    border: 1px solid lightgray; /*Defines a border*/
+    box-sizing: border-box; /*Maintains width with padding*/
+    border-radius: 5px; /*Allows the container to have rounded edges*/
+    font-size: 14px; /*Adjust the font size*/
+}
+
+/* Submit Button */
+button {
+    background-color: #53514b; /*Creates color (RGB) with opacity option (0.8)*/
+    color: white; /*Sets colour of text*/
+    padding: 14px 20px; /*Adds space inside button using padding*/
+    margin: 8px 0; /*Adds spacing in between fields*/
+    border: none; /*Defines a border*/
+    cursor: pointer; /*specifies the mouse cursor to be displayed when pointing over an element*/
+    width: 100%; /*Ensures the width of the button*/
+    font-size: 16px; /*Adjust the font size*/
+    border-radius: 5px; /*Allows the container to have rounded edges*/
+    transition: background 0.3s; /*allows property values to change smoothly*/
+}
+
+/* Hover Effect */
+button:hover { /*Allows the style of the button to be changed when the mouse is over it*/
+    opacity: 0.8; /*Provides opacity to the button*/
+}

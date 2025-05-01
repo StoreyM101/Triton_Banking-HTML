@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!--Document Type Decleration for HTML-->
+<html lang="en"> <!--Specifies the English Language-->
+
+<head> <!--Head of the HTML-->
+    <title>Triton Banking</title> <!--Title of the HTML-->
+    <meta charset="UTF-8"> <!--Specifies UTF-8 Character Encoding Standard-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Size of the visible area on the screen-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Triton-Banking-Login.css') }}"> <!--Specifies the CSS style sheet via static link-->
+</head> <!--End of HTML Head-->
+
+<body> <!--Start of HTML Body-->
+
+    <div class="content"> <!--"content" class (top-left of webpage)-->
+        <img src="{{ url_for('static', filename='Triton.jpg') }}" alt="Triton-Image" class="overlay-image"> <!--Defines an image to overlay over background-->
+        <div class="text-container"> <!--"text-container" nested class-->
+            <h1 class="title">Triton Banking</h1> <!--Header Definition-->
+            <p class="slogan">Ride the Waves of Wealth with Triton Banking</p> <!--Paragraph definition for text-->
+        </div> <!--End of nested "text-container" class-->
+    </div> <!--End of "content" class-->
+
+    <div class="login-form"> <!--"login-form" class (center of webpage)-->
+        <h2>Login</h2> <!--Header Definition-->
+        <form action="{{ url_for('login') }}" method="POST"> <!--HTML form allowing for user input (passed onto server for processing using HTTP POST request)-->
+            <div class="user-container"> <!--"user-container" nested class-->
+                <label for="uname"><b>Username</b></label> <!--Label Definition "uname"-->
+                <input type="text" placeholder="Enter Username" name="uname" required> <!--Text entry field for user input-->
+                <label for="psword"><b>Password</b></label> <!--Label Definition "psword"-->
+                <input type="password" placeholder="Enter Password" name="psword" required> <!--Text entry field for user input-->
+                <button type="submit">Login</button> <!--Button to submit user input.-->
+            </div> <!--End of nested "user-container" classL-->
+        </form> <!--End of form-->
+    </div> <!--End of "user-container" class-->
+
+</body> <!--End of HTML Body-->
+
+</html> <!--End of HTML code-->
